@@ -1,0 +1,4 @@
+.DS_Store
+venv/
+faiss_index.bin
+memory_db/
