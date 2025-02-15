@@ -175,22 +175,22 @@ Once started, you can ask questions like:
 ##🤔 How it Works?
 
 🔹 When a user enters a question:
-	##1.	Check if the user is introducing themselves
+	## **1.	Check if the user is introducing themselves
   	•	If they say “My name is Anarv”, the chatbot remembers the name.
   	•	If they ask “What is my name?”, it retrieves and responds with the name.
-	##2.	Search Past Memory (Short-Term & Long-Term)
+	## **2.	Search Past Memory (Short-Term & Long-Term)
   	•	First, it checks Short-Term Memory (STM) (last 10 interactions).
   	•	If no relevant data is found, it searches Long-Term Memory (LTM) using FAISS (a similarity search engine).
   	•	If a match is found, it retrieves past responses.
-	##3.	If Memory Fails, Search the Web
+	## **3.	If Memory Fails, Search the Web
   	•	If no answer is found in memory, it performs a web search using DuckDuckGo.
   	•	It then extracts useful information from search results.
-	##4.	Generating the Response
+	## **4.	Generating the Response
   	•	Once memory or search data is available, the chatbot creates a prompt for FLAN-T5.
   	•	FLAN-T5 then generates a structured and meaningful response.
-	##5.	Saving the Conversation
+	## **5.	Saving the Conversation
   	•	The chatbot stores the user’s query and its response in memory, so it can recall them later.
-	##6.	Displaying the Response
+	## **6.	Displaying the Response
   	•	The chatbot prints the response in both the terminal and the frontend (web UI).
 
 ---
