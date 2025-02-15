@@ -174,7 +174,7 @@ Once started, you can ask questions like:
 ---
 ## 🤔 How it Works?
 
-## 🔹 When a user enters a question:--
+## **🔹 When a user enters a question:--**
 
 ### **1.Check if the user is introducing themselves**
   	•If they say “My name is Anarv”, the chatbot remembers the name.
