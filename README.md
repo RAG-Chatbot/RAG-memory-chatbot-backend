@@ -1,10 +1,10 @@
-Here’s an updated README.md with a clear and structured explanation of the backend approach and step-by-step process of how the chatbot works.
 
-RAG-Based Lifetime Memory Chatbot
+
+# RAG-Based Lifetime Memory Chatbot
 
 🚀 An AI Chatbot with Retrieval-Augmented Generation (RAG), Lifetime Memory, and Web Search Capabilities
 
-📌 Overview
+###📌 Overview
 
 The Lifetime Memory Chatbot is an advanced Retrieval-Augmented Generation (RAG) chatbot that:
 ✅ Remembers past interactions and recalls relevant memory.
@@ -13,13 +13,13 @@ The Lifetime Memory Chatbot is an advanced Retrieval-Augmented Generation (RAG) 
 ✅ Fetches live data via DuckDuckGo Web Search when memory is insufficient.
 ✅ Provides a web-based interface for users to interact with the chatbot.
 
-🎯 Project Approach
+###🎯 Project Approach
 
 How Does the Backend Work?
 
 This chatbot uses Retrieval-Augmented Generation (RAG) to generate responses intelligently by combining stored memory and external search capabilities. Below is the detailed approach:
 
-Step-by-Step Execution Process
+### Step-by-Step Execution Process
 
 1️⃣ User Inputs Query
 	•	The user enters a question or statement in the chatbot interface (CLI or Web UI).
@@ -48,7 +48,7 @@ Step-by-Step Execution Process
 	•	The chatbot prints the response in CLI (Terminal) and Web UI (Chat Interface).
 	•	Users can continue chatting, and the chatbot remembers context for future queries.
 
-🛠 Project Structure
+### 🛠 Project Structure
 
 Lifetime-Memory-Chatbot
 │── backend/
@@ -70,46 +70,46 @@ Lifetime-Memory-Chatbot
 │── requirements.txt          # Dependencies
 └── faiss_index.bin           # FAISS Vector Store (Auto-Generated)
 
-🔬 Detailed Explanation of Backend Components
+###🔬 Detailed Explanation of Backend Components
 
-1️⃣ chatbot.py (Main Logic)
+####1️⃣ chatbot.py (Main Logic)
 	•	Handles user queries and manages the complete response generation workflow.
 	•	Checks user identity and remembers the name.
 	•	Queries past memory or searches the web if memory is insufficient.
 	•	Uses FLAN-T5 to generate responses based on retrieved information.
 
-2️⃣ memory_manager.py (Memory Handling)
+####2️⃣ memory_manager.py (Memory Handling)
 	•	Manages Short-Term Memory (STM) (last 10 interactions).
 	•	Stores Long-Term Memory (LTM) in ChromaDB.
 	•	Handles name retention when a user introduces themselves.
 
-3️⃣ retrieval.py (RAG Retrieval)
+####3️⃣ retrieval.py (RAG Retrieval)
 	•	Uses FAISS to perform vector-based similarity searches.
 	•	Retrieves contextually relevant responses from long-term memory.
 	•	Ensures memory relevance before passing it to the chatbot.
 
-4️⃣ DuckDuckGo Web Search
+####4️⃣ DuckDuckGo Web Search
 	•	When memory does not contain relevant answers, the chatbot searches the web.
 	•	Integrates DuckDuckGo API to fetch live search results.
 
-🛠 Setup & Installation
+###🛠 Setup & Installation
 
-1️⃣ Clone the Repository
+####1️⃣ Clone the Repository
 
 git clone https://github.com/RAG-Chatbot/RAG-memory-chatbot-backend.git
 cd RAG-memory-chatbot-backend
 
-2️⃣ Create & Activate Virtual Environment
+####2️⃣ Create & Activate Virtual Environment
 
 python -m venv venv
 source venv/bin/activate  # For macOS/Linux
 venv\Scripts\activate     # For Windows
 
-3️⃣ Install Dependencies
+####3️⃣ Install Dependencies
 
 pip install -r requirements.txt
 
-4️⃣ Run the Chatbot
+####4️⃣ Run the Chatbot
 
 To run in CLI mode, use:
 
@@ -122,7 +122,7 @@ python -m http.server 8080
 
 Then, open http://127.0.0.1:8080 in your browser.
 
-📢 Usage
+###📢 Usage
 
 💬 Interacting with the Chatbot
 
@@ -140,18 +140,15 @@ Once started, you can ask questions like:
 👤 You: clear memory
 🤖 AI: 🧹 Memory Cleared: All past interactions erased.
 
-🎯 Future Improvements
+###🎯 Future Improvements
 
 🔹 Multi-User Support: Extend memory storage for multiple users.
 🔹 Customizable API Integration: Allow switching between multiple search engines.
 🔹 Better RAG Optimization: Improve FAISS-based search accuracy.
 🔹 GUI Enhancements: Advanced chat UI with better user experience.
 
-🔥 Contributing
+###🔥 Contributing
 	1.	Fork the repo
 	2.	Create a feature branch: git checkout -b feature-xyz
 	3.	Commit changes: git commit -m "Added XYZ feature"
 	4.	Push & Submit PR: git push origin feature-xyz
-
-
-This step-by-step breakdown ensures that the jury (or anyone) can easily understand how the chatbot is built and operates. 🚀 Let me know if you need further clarifications or modifications!
